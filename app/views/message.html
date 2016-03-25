@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="../public/css/foundation.css"/>
+    <link rel="stylesheet" href="../public/css/custom.css"/>
+    <script src="../public/js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+<nav class="nav-bar top-bar" data-topbar>
+    <ul class="title-area">
+        <li class="name">
+            <h1>
+                <a href="views/tests.html">
+                    <!--<img class="roomly_logo" src="img/roomly-logo.png">-->
+                    <span>RoomlySpace</span>
+                </a>
+            </h1>
+        </li>
+    </ul>
+</nav>
+
+<!-- Main -->
+<main class="main content">
+    <div class="columns columnsGettingStarted">
+        <h3>Messages</h3>
+    </div>
+
+    <!-- Tabs Menu -->
+    <div class="columns tabs-menu">
+        <ul class="inline-list" data-tab>
+            <li class="tab-title active"><a href="#panel1">User-Details</a></li>
+            <li class="tab-title"><a href="#panel2">Apartment-Details</a></li>
+            <li class="tab-title"><a href="#panel3">Messages</a></li>
+        </ul>
+    </div>
+
+    <!-- User details -->
+    <div class="tabs-content">
+        <div class="content active" id="panel1">
+            <div class="large-4 columns">
+                <input type="text" placeholder="Apartment name">
+                <input type="number" placeholder="Lease term (1yr)">
+                <input type="number" placeholder="Lease price ($500.00)">
+                <input type="text" placeholder="Location (Ellensburg, WA)">
+            </div>
+
+            <!-- Text Area (User preference) -->
+            <div id="textAre" class="large-8 columns">
+                <label class="preference-title">User-Preference</label>
+                <textarea placeholder="About you..." name="text" cols="30" rows="8"></textarea>
+            </div>
+        </div>
+        <!-- End of user details -->
+
+        <!-- Apartment Details -->
+        <div class="content" id="panel2">
+            <div class="large-4 columns">
+                <input type="text" placeholder="Apartment name">
+                <input type="number" placeholder="Lease term (1yr)">
+                <input type="number" placeholder="Lease price ($500.00)">
+                <input type="text" placeholder="Location (Ellensburg, WA)">
+            </div>
+
+            <div id="textArea" class="large-8 columns">
+                <label class="preference-title">User-Preference</label>
+                <textarea placeholder="About you..." name="text" id=" " cols="30" rows="8"></textarea>
+            </div>
+
+
+            <div class="columns" style="margin-top: 40px">
+                <label class="upload-image-title">Photos <span class="badge">6</span></label>
+            </div>
+
+            <div class="columns images">
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+                <div class="large-2 column">
+                    <img src="http://placehold.it/350x350" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- End of Apartment Details --->
+
+        <!-- Start of Messages -->
+          <div class="content active" id="panel3">
+            <!-- Text Area (User preference) -->
+            <div id="textAre" class="large-8 columns">
+                <label class="preference-title">Messages</label>
+                <textarea placeholder="About you..." name="text" cols="30" rows="8"></textarea>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script src="../public/js/vendor/jquery.js"></script>
+<script src="../public/js/foundation.min.js"></script>
+<script src="../public/js/foundation/foundation.magellan.js"></script>
+
+<script>
+    $(document).foundation();
+
+</script>
+</body>
+</html>
