@@ -1,125 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<!doctype html>
+<!-- Roommate search application. The app is build to target students within smaller town -->
 
+<html class="no-js" lang="en">
+<head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="../public/css/foundation.css"/>
-    <link rel="stylesheet" href="../public/css/custom.css"/>
-    <script src="../public/js/vendor/modernizr.js"></script>
+    <title>Roomly | Welcome</title>
+    <link rel="stylesheet" href="../public/foundation-6-2/css/foundation.min.css">
+    <link rel="stylesheet" href="../public/foundation-6-2/css/custom.css">
+    <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">
 </head>
+
 <body>
 
-<nav class="nav-bar top-bar" data-topbar>
-    <ul class="title-area">
-        <li class="name">
-            <h1>
-                <a href="views/tests.html">
-                    <!--<img class="roomly_logo" src="img/roomly-logo.png">-->
-                    <span>RoomlySpace</span>
-                </a>
-            </h1>
-        </li>
-    </ul>
-</nav>
-
-<!-- Main -->
-<main class="main content">
-    <div class="columns columnsGettingStarted">
-        <h3>Messages</h3>
+<!-- MENU TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text"><img style="width:50%;" src="../public/img/roomly-logo.png"></li>
+        </ul>
     </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#">Help?</a></li>
+            <li><a href="#" data-open="signUpModal">Sign up</a></li>
+            <li><a href="#" data-open="loginModal">Login</a>
+        </ul>
+    </div>
+</div>
 
-    <!-- Tabs Menu -->
-    <div class="columns tabs-menu">
-        <ul class="inline-list" data-tab>
-            <li class="tab-title active"><a href="#panel1">User-Details</a></li>
-            <li class="tab-title"><a href="#panel2">Apartment-Details</a></li>
-            <li class="tab-title"><a href="#panel3">Messages</a></li>
+<!-- END OF TOP-MENU-BAR-->
+
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- Tabs Menu -->
+<div class="main">
+    <div class="row menu-centered inner-menu">
+        <ul class="menu column">
+            <li class=""><a href="#panel1">Profile</a></li>
+            <li class=""><a href="#panel2">Apartment</a></li>
+            <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
         </ul>
     </div>
 
     <!-- User details -->
-    <div class="tabs-content">
-        <div class="content active" id="panel1">
-            <div class="large-4 columns">
-                <input type="text" placeholder="Apartment name">
-                <input type="number" placeholder="Lease term (1yr)">
-                <input type="number" placeholder="Lease price ($500.00)">
-                <input type="text" placeholder="Location (Ellensburg, WA)">
+    <div class="row profile">
+        <div class="column">
+            <p>Profile edits</p>
+        </div>
+        <div id="panel1">
+            <div class="large-3 columns">
+                <img class="thumbnail" src="../public/img/users_profile_images/student-1.jpg">
+                <label for="profileImage" class="button">Upload image</label>
+                <input type="file" id="profileImage" class="show-for-sr">
+                <input type="text" placeholder="User name">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
             </div>
 
             <!-- Text Area (User preference) -->
-            <div id="textAre" class="large-8 columns">
-                <label class="preference-title">User-Preference</label>
-                <textarea placeholder="About you..." name="text" cols="30" rows="8"></textarea>
+            <div class="large-9 columns">
+                <label>Preference
+                    <textarea placeholder="About you..." name="text" cols="30" rows="4"></textarea>
+                </label>
+
+                <label>Personality
+                    <select>
+                        <option value="quiet">Quiet</option>
+                        <option value="friendly">Outgoing</option>
+                        <option value="shy">Shy but friendly</option>
+                    </select>
+                </label>
+                <label>Smoking
+                    <select>
+                        <option value="frequentSmoker">Frequently</option>
+                        <option value="nonSmoker">None</option>
+                        <option value="occasionalSmoker">Social drinker</option>
+                    </select>
+                </label>
+
+                <label>Tidiness
+                    <select>
+                        <option value="frequentSmoker">Tidy</option>
+                        <option value="nonSmoker">Somewhat</option>
+                        <option value="occasionalSmoker">Don't care</option>
+                    </select>
+                </label>
+
+                <label>Partying
+                    <select>
+                        <option value="frequent">Frequently</option>
+                        <option value="nonParty">None</option>
+                        <option value="occasional">Occasional</option>
+                        <option value="careless">Don't care</option>
+                    </select>
+                </label>
+
+                <label>Drinking
+                    <select>
+                        <option value="frequentSmoker">Frequently</option>
+                        <option value="nonSmoker">None smoker</option>
+                        <option value="occasionalSmoker">Don't care</option>
+                    </select>
+                </label>
             </div>
         </div>
         <!-- End of user details -->
 
-        <!-- Apartment Details -->
-        <div class="content" id="panel2">
-            <div class="large-4 columns">
+
+        <!-- IMPORTANT NOT ABOUT THIS SECTION
+
+        Apartment Details
+
+        When the user selects the check as having a room, the user
+        will be able to to upload their room images on the app.
+
+        Requirements for images are,
+        Bedroom image
+        Kitchen
+        Living room and maybe the outside of the
+        apartment or anything like swimming pool
+
+
+        -->
+
+
+        <div class="column hide" id="panel2">
+            <hr/>
+            <div class="row" style="padding-left: 15px;">
+                <div class="column">
+                    <label>Apartment edits</label>
+                </div>
+            </div>
+            <div class="large-3 columns">
                 <input type="text" placeholder="Apartment name">
-                <input type="number" placeholder="Lease term (1yr)">
-                <input type="number" placeholder="Lease price ($500.00)">
-                <input type="text" placeholder="Location (Ellensburg, WA)">
+                <input type="number" placeholder="Lease term ">
+                <input type="number" placeholder="Lease price">
+                <input type="text" placeholder="Location ">
             </div>
 
-            <div id="textArea" class="large-8 columns">
-                <label class="preference-title">User-Preference</label>
-                <textarea placeholder="About you..." name="text" id=" " cols="30" rows="8"></textarea>
+            <div class="large-9 columns">
+                <label for="uploadRoomImage" class="button">Upload File</label>
+                <input type="file" id="uploadRoomImage" class="show-for-sr">
+                <div class="row small-up-2 large-up-4" role="region">
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="../public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+                    </div>
+
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                    </div>
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                    </div>
+
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                    </div>
+                </div>
             </div>
 
-
-            <div class="columns" style="margin-top: 40px">
-                <label class="upload-image-title">Photos <span class="badge">6</span></label>
-            </div>
-
-            <div class="columns images">
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-                <div class="large-2 column">
-                    <img src="http://placehold.it/350x350" alt="">
-                </div>
-            </div>
         </div>
-        <!-- End of Apartment Details --->
-
-        <!-- Start of Messages -->
-          <div class="content active" id="panel3">
-            <!-- Text Area (User preference) -->
-            <div id="textAre" class="large-8 columns">
-                <label class="preference-title">Messages</label>
-                <textarea placeholder="About you..." name="text" cols="30" rows="8"></textarea>
-            </div>
-        </div>
-
     </div>
-</main>
+</div>
 
-<script src="../public/js/vendor/jquery.js"></script>
-<script src="../public/js/foundation.min.js"></script>
-<script src="../public/js/foundation/foundation.magellan.js"></script>
+
+<!-------------------------------------------------------------------------------------->
+
+<!--    FOOTER  -->
+<div id="footer" class=" allout large secondary ">
+    <div class="row">
+        <div class="large-4 columns">
+            <p>Roomly.Space</p>
+            <p>Your one stop shop for roommate and apartments is made easier. Try it today.</p>
+        </div>
+
+        <div class="large-3 large-offset-2 columns">
+            <ul class="menu vertical">
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Our platform</a></li>
+                <li><a href="#">How it works</a></li>
+            </ul>
+        </div>
+        <div class="large-3 columns">
+            <ul class="menu vertical">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="columns" style="text-align: center; font-size: small">
+            <p>Roomly.Space &#169; 2016</p>
+        </div>
+    </div>
+</div>
+
+<!-- END OF FOOTER -->
+
+<!----------------------------------------------------------------------------------------->
+
+
+<script src="../public/foundation-6-2/js/vendor/jquery.min.js"></script>
+<script src="../public/foundation-6-2/js/foundation.min.js"></script>
 
 <script>
-    $(document).foundation();
 
 </script>
+<script>
+    $(document).foundation();
+</script>
 </body>
+
 </html>

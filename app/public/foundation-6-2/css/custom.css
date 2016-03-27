@@ -1,14 +1,21 @@
 /*        Orbit style sheet */
 
-.top-bar .menu{
+html {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 15px;
+}
+
+.top-bar .menu {
     background-color: white;
 }
+
 .top-bar {
     background-color: white;
 }
+
 .orbit-slide img {
     height: 500px;
-    /*width: 100%;*/
+    width: 2000%;
     /*margin: auto;*/
     background-size: contain;
 }
@@ -28,50 +35,51 @@
     /*margin: auto;*/
 }
 
-
 /* Transparency on the images. (Temporarily commented out) */
 .orbit {
     background-color: darkolivegreen;
     opacity: 0.8;
-    width: 100%;
+    /*width: 100%;*/
 }
-
 
 .search {
     background-color: white;
 }
 
-.orbit h3 {
-    top: 30%;
-    left: 12%;
-    color: black;
-}
-
-
 .featured {
-    margin-top:50px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 #footer {
     background: #302B54;
     opacity: 0.7;
-    color:whitesmoke;
+    color: whitesmoke;
     padding-top: 30px;
     padding-bottom: 50px;
 }
 
-#footer ul li a{
-    color:whitesmoke;
+#footer ul li a {
+    color: whitesmoke;
 
 }
 
 .orbit {
-    width: auto;
-    height: auto;
+    /*width: auto;*/
+    /*height: auto;*/
 }
 
 .button {
     background: #009ACD;
     opacity: 0.9;
+}
+
+label {
+    font-size: 15px;
+    color: #5f5f5f;
+}
+
+h6 {
+    font-size: 15px;
+    color: #5f5f5f;
 }
