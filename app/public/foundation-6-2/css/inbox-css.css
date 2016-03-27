@@ -1,0 +1,82 @@
+
+body {
+    background-color: whitesmoke;
+
+}
+
+div {
+    text-space: 1.2em;
+}
+
+label {
+    padding-bottom: 10px;
+
+}
+
+.roomly_logo {
+    margin: 10px;
+}
+
+.profile {
+    padding-top: 20px;
+}
+
+textArea {
+    border: solid 6px #e7e7e7;
+    color: #000;
+    padding: 10px;
+}
+
+.leaseInfo input {
+    background-color: #e7e7e7;
+    border: hidden;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.tabs-menu {
+    margin-bottom: 20px;
+}
+
+#tab-title {
+    color: #444444;
+}
+
+.tab-title a {
+    font-weight: 400;
+    color: black;
+    background-color: white;
+}
+
+.columnsGettingStarted h3 {
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+.inner-menu {
+    background: #302B54;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.inner-menu ul li a{
+    color: white;
+    background: #302B54;
+    opacity: 0.7;
+
+}
+.badge {
+    color: #0078a0;
+}
+
+.profile {
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+
+
+
+
+
