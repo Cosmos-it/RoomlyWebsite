@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../public/foundation-6-2/css/foundation.min.css">
     <link rel="stylesheet" href="../public/foundation-6-2/css/custom.css">
     <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet' type='text/css'></head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
+          type='text/css'>
+</head>
 
 </head>
 
@@ -37,25 +39,37 @@
 <!------------------------------------------------------------------------------------------------------------>
 
 <!-- Tabs Menu -->
-<section class="main row">
-    <section class="row menu-centered inner-menu">
-        <ul class="menu column">
-            <li class=""><a href="#user-profile">Profile</a></li>
-            <li class=""><a href="#edit-user">Edit</a></li>
-            <li class=""><a href="#inbox">Inbox</a></li>
+<section class="inner-menu">
+    <div class="row button-group round even-4">
+        <ul class="menu ">
+            <li class=""><a class="button" href="#user-profile">Profile</a></li>
+            <li class=""><a class="button" href="#edit-user">Edit</a></li>
+            <li class=""><a class="button" href="#inbox">Inbox</a></li>
             <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
         </ul>
-    </section>
+    </div>
 
+
+</section>
+
+
+<section class="main row">
     <!-- User details -->
     <section class="row profile">
-        <section class="column">
-            <!--
-
+        <!--
             Display something like this (Looking for a roommate or looking for room space) from the database
-
-            -->
-            <h6>Looking for a roommate</h6>
+        -->
+        <section class="column">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li>Looking for a roommate</li> <!--  This data here changes ( USER CAN HAVE ROOM OR NOT HAVE A ROOM )-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#inbox.html">Send message</a> <!--- (ALLOWS USER TO SEND MESSAGE TO ANOTHER USER --->
+                </ul>
+            </div>
         </section>
         <hr/>
 
@@ -225,7 +239,7 @@
             </ul>
         </div>
         <div class="columns" style="text-align: center; font-size: small">
-            <p>Roomly.Space &#169; 2016</p>
+            <p>&#169; RoomlySpace&#0153;, Inc 2016 </p>
         </div>
     </div>
 </section>

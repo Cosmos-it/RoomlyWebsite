@@ -1,7 +1,16 @@
 /*        Orbit style sheet */
 
-html {
-    font-family: 'Playfair Display', sans-serif;
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+html body{
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
 
@@ -14,11 +23,15 @@ html {
 }
 
 .orbit-slide img {
-    height: 500px;
+    height: 370px;
     width: 2000%;
     /*margin: auto;*/
     background-size: contain;
 }
+
+.top-bar .top-bar-right ul li a{
+    color: gray;
+} 
 
 .orbit .caption {
     position: absolute;

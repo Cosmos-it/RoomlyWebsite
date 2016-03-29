@@ -8,8 +8,10 @@
     <title>Roomly | Welcome</title>
     <link rel="stylesheet" href="../public/foundation-6-2/css/foundation.min.css">
     <link rel="stylesheet" href="../public/foundation-6-2/css/custom.css">
-    <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">       
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet' type='text/css'></head>
+    <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
+          type='text/css'>
+</head>
 
 </head>
 
@@ -37,21 +39,34 @@
 <!------------------------------------------------------------------------------------------------------------>
 
 <!-- Tabs Menu -->
-<section class="main row">
-    <div class="row menu-centered inner-menu">
-        <ul class="menu column">
-            <li class=""><a href="#user-profile">Profile</a></li>
-            <li class=""><a href="#edit-user">Edit</a></li>
-            <li class=""><a href="#inbox">Inbox</a></li>
+<section class="inner-menu">
+    <div class="row">
+        <ul class="menu button-group round even-4">
+            <li class=""><a class="button" href="#user-profile">Profile</a></li>
+            <li class=""><a class="button" href="#edit-user">Edit</a></li>
+            <li class=""><a class="button" href="#inbox">Inbox</a></li>
             <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
         </ul>
     </div>
 
+</section>
+
+<section class="main row">
     <!-- User details -->
     <section class="row profile">
-        <div class="column">
-            <h6>Edit profile</h6>
-        </div>
+        <section class="column">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li>Edit Profile</li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#">Save all</a>
+                        <!--- (Save all data edited) and display a small pop up success message --->
+                </ul>
+            </div>
+        </section>
         <hr>
         <div id="panel1">
             <section class="large-3 columns">
@@ -163,14 +178,6 @@
                              src="../public/img/users_profile_images/room-images/living-room.jpeg">
                     </div>
                 </div>
-
-                <div class="column">
-                    <div class="row">
-                        <hr/>
-                        <input class="button success" type="button" value="Save your edits">
-                    </div>
-                </div>
-
             </section>
         </section>
     </section>
@@ -204,7 +211,7 @@
             </ul>
         </div>
         <div class="columns" style="text-align: center; font-size: small">
-            <p>Roomly.Space &#169; 2016</p>
+            <p>&#169; RoomlySpace&#0153;, Inc 2016 </p>
         </div>
     </div>
 </section>
