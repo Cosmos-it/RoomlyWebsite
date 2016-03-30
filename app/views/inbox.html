@@ -1,26 +1,27 @@
 <!------------------------------------------------------------------------------------------------------------>
 
+
 <!-- Tabs Menu -->
-<section class="inner-menu">
-    <div class="row">
-        <ul class="menu button-group round even-4">
-            <li><a class="button" href="#user-profile">Profile</a></li>
-            <li><a class="button" href="#edit-profile">Edit Profile</a></li>
-            <li><a class="button" href="#inbox">Inbox</a></li>
-            <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
-        </ul>
-    </div>
-</section>
+<section ng-controller="messageController">
+    <section class="inner-menu">
+        <div class="row">
+            <ul class="menu button-group round even-4">
+                <li><a class="button" href="#user-profile">Profile</a></li>
+                <li><a class="button" href="#edit-profile">Edit Profile</a></li>
+                <li><a class="button" href="#inbox">Inbox</a></li>
+            </ul>
+        </div>
+    </section>
 
 
-<section class="main row">
-    <section class="main row">
+    <section class="main">
         <!-- User details -->
         <div class="row profile">
             <div class="column">
                 <h6>Inbox</h6>
-                <hr>
             </div>
+            <hr>
+
             <div class="column" style="padding: 10px; text-align: center">
                 <div>
                     <!-- Display this from the data base-->

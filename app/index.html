@@ -25,16 +25,18 @@
 
 <!-- MENU TOP BAR -->
 <section class="top-bar">
-    <div class="top-bar-left">
-        <a href="#"><img style="width:50%;" src="public/img/roomly-logo.png"></a>
-    </div>
-    <div class="top-bar-right">
-        <ul class="menu">
-            <li><a href="#">Help?</a></li>
-            <li><a href="#authsignup">Sign up</a></li>
-            <li><a href="#authsignup">Login</a>
-        </ul>
-    </div>
+    <div class="row">
+            <div class="top-bar-left">
+                <a href="#"><img style="width:100px; padding: 5px;" src="public/img/roomly-logo.png"></a>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#help">Help?</a></li>
+                    <li><a href="#authsignup">Sign up</a></li>
+                    <li><a href="#authsignup">Login</a>
+                </ul>
+            </div>
+        </div>
 </section>
 
 <!-- END OF TOP-MENU-BAR-->
@@ -45,7 +47,7 @@
 <div ui-view>
     <div class="row">
         <div class="small-4 small-centered columns" style="font-size: medium; color: #009ACD;">
-            <h4>... Loading ...</h4>
+            <h4>... Please wait loading ...</h4>
         </div>
     </div>
 </div>
@@ -89,6 +91,7 @@
 <script src="public/foundation-6-2/js/foundation.min.js"></script>
 <script src="public/js/app.js"></script>
 <script src="public/js/controllers/mainController.js"></script>
+<script src="public/js/controllers/messageController.js"></script>
 <script src="public/js/controllers/browseRoommatesController.js"></script>
 <script src="public/js/controllers/browseApartmentController.js"></script>
 <script src="public/js/controllers/userAuthController.js"></script>

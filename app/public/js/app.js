@@ -47,6 +47,11 @@ roomly.config(['$stateProvider', '$urlRouterProvider',
                 controller: 'messageController'
             })
 
+            .state('/help', {
+                url: '/help',
+                templateUrl: 'views/help.html',
+                controller: 'helpController'
+            })
     }]);
 
 

@@ -2,18 +2,18 @@
 
 
 * {
-    margin: 0;
-}
-
-
-body {
-    background-color: #ECECEC;
-    color: #1a1a1a;;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
 }
 
 html body{
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
+}
+
+body {
+    background-color: #ECECEC;
+    color: #1a1a1a;;
 }
 
 .top-bar .menu {
@@ -39,13 +39,12 @@ html body{
 }
 
 .top-bar .top-bar-right ul li a:hover{
-    color: #2b81af;
-
+   color: #2b81af;
 }
 
-.user:hover {
-    background-color: #8699a4;
-}
+/*.user:hover {*/
+    /*background-color: #8699a4;*/
+/*}*/
 
 .orbit .caption {
     position: absolute;
@@ -54,10 +53,10 @@ html body{
     bottom: 0px;
     left: 0px;
     color: #fff;
-    background: #302B54;
+    background: #0a0a0a;
     text-align: center;
     font-weight: bold;
-    opacity: 0.8;
+    opacity: 0.6;
     padding: 5px;
     /*margin: auto;*/
 }
@@ -78,8 +77,85 @@ html body{
     margin-bottom: 50px;
 }
 
-#footer {
+
+
+div {
+    text-space: 1.2em;
+}
+
+label {
+    padding-bottom: 10px;
+
+}
+
+.top-bar-left a {
+    margin-top: 5px;
+}
+
+.profile {
+    padding-top: 10px;
+}
+
+textArea {
+    border: solid 6px #e7e7e7;
+    color: #000;
+    padding: 10px;
+}
+
+.leaseInfo input {
+    background-color: #e7e7e7;
+    border: hidden;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.tabs-menu {
+    margin-bottom: 20px;
+}
+
+#tab-title {
+    color: #444444;
+}
+
+.tab-title a {
+    font-weight: 400;
+    color: black;
+    background-color: white;
+}
+
+/*.columnsGettingStarted h3 {*/
+/*color: #444444;*/
+/*margin-bottom: 30px;*/
+/*}*/
+
+.inner-menu {
+    background: #0a0a0a;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    /*margin-top: 5px;*/
+}
+
+.inner-menu ul li a{
+    color: white;
     background: #302B54;
+    opacity: 0.7;
+
+}
+.badge {
+    color: #0078a0;
+}
+
+.profile {
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.main {
+    padding: 10px;
+}
+
+#footer {
+    background: #0a0a0a;
     opacity: 0.7;
     color: whitesmoke;
     padding-top: 30px;
@@ -103,10 +179,28 @@ html body{
 
 label {
     font-size: 15px;
+    font-weight: 500;
     color: #1a1a1a;
 }
 
-h6 {
+h6, li {
     font-size: 15px;
+    font-weight: 600;
     color: #1a1a1a;
 }
+
+.input-search input::-webkit-input-placeholder
+{
+    color:    white;
+    background-color: #881f0e;
+    padding-left: 10px;
+
+}
+
+
+.input, input[type="text"] {
+    /*background-color: black;*/
+    color: #000000;
+
+}
+
