@@ -5,8 +5,10 @@
     margin: 0;
 }
 
+
 body {
     background-color: #ECECEC;
+    color: #1a1a1a;;
 }
 
 html body{
@@ -16,10 +18,12 @@ html body{
 
 .top-bar .menu {
     background-color: white;
+
 }
 
 .top-bar {
     background-color: white;
+
 }
 
 .orbit-slide img {
@@ -30,8 +34,18 @@ html body{
 }
 
 .top-bar .top-bar-right ul li a{
-    color: gray;
-} 
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.top-bar .top-bar-right ul li a:hover{
+    color: #2b81af;
+
+}
+
+.user:hover {
+    background-color: #8699a4;
+}
 
 .orbit .caption {
     position: absolute;
@@ -50,7 +64,7 @@ html body{
 
 /* Transparency on the images. (Temporarily commented out) */
 .orbit {
-    background-color: darkolivegreen;
+    background-color: #ECECEC;
     opacity: 0.8;
     /*width: 100%;*/
 }
@@ -89,10 +103,10 @@ html body{
 
 label {
     font-size: 15px;
-    color: #5f5f5f;
+    color: #1a1a1a;
 }
 
 h6 {
     font-size: 15px;
-    color: #5f5f5f;
+    color: #1a1a1a;
 }

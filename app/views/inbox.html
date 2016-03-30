@@ -1,52 +1,12 @@
-<!doctype html>
-<!-- Roommate search application. The app is build to target students within smaller town -->
-
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Roomly | Welcome</title>
-    <link rel="stylesheet" href="../public/foundation-6-2/css/foundation.min.css">
-    <link rel="stylesheet" href="../public/foundation-6-2/css/custom.css">
-    <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
-          type='text/css'>
-
-    <!-- Load all js -->
-
-
-</head>
-
-<body>
-
-<!-- MENU TOP BAR -->
-<section class="top-bar">
-    <div class="top-bar-left">
-        <ul class="menu">
-            <li class="menu-text"><img style="width:50%;" src="../public/img/roomly-logo.png"></li>
-        </ul>
-    </div>
-    <div class="top-bar-right">
-        <ul class="menu">
-            <li><a href="#">Help?</a></li>
-            <li><a href="#" data-open="signUpModal">Sign up</a></li>
-            <li><a href="#" data-open="loginModal">Login</a>
-        </ul>
-    </div>
-</section>
-
-<!-- END OF TOP-MENU-BAR-->
-
-
 <!------------------------------------------------------------------------------------------------------------>
 
 <!-- Tabs Menu -->
 <section class="inner-menu">
     <div class="row">
         <ul class="menu button-group round even-4">
-            <li class=""><a class="button" href="#user-profile">Profile</a></li>
-            <li class=""><a class="button" href="#edit-user">Edit</a></li>
-            <li class=""><a class="button" href="#inbox">Inbox</a></li>
+            <li><a class="button" href="#user-profile">Profile</a></li>
+            <li><a class="button" href="#edit-profile">Edit Profile</a></li>
+            <li><a class="button" href="#inbox">Inbox</a></li>
             <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
         </ul>
     </div>
@@ -59,8 +19,8 @@
         <div class="row profile">
             <div class="column">
                 <h6>Inbox</h6>
+                <hr>
             </div>
-            <hr>
             <div class="column" style="padding: 10px; text-align: center">
                 <div>
                     <!-- Display this from the data base-->
@@ -72,65 +32,7 @@
         </div>
 
     </section>
-
-
 </section>
-
-
-<!-------------------------------------------------------------------------------------->
-
-<!--    FOOTER  -->
-<section id="footer" class=" allout large secondary ">
-    <div class="row">
-        <div class="large-4 columns">
-            <p>Roomly.Space</p>
-            <p>Your one stop shop for a roommate and or a room space has now been easier.</p>
-        </div>
-
-        <div class="large-3 large-offset-2 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Our platform</a></li>
-                <li><a href="#">How it works</a></li>
-            </ul>
-        </div>
-
-        <div class="large-3 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </div>
-        <div class="columns" style="text-align: center; font-size: small">
-            <p>Roomly.Space &#169; 2016</p>
-        </div>
-    </div>
-</section>
-
-<!-- END OF FOOTER -->
-
-<!----------------------------------------------------------------------------------------->
-
-
-<script src="../public/foundation-6-2/js/vendor/jquery.min.js"></script>
-<script src="../public/foundation-6-2/js/foundation.min.js"></script>
-<!-- Controllers javascript files-->
-<script src="../public/js/app.js"></script>
-<script src="../public/js/controllers/browseRoommatesController.js"></script>
-<script src="../public/js/controllers/browseApartmentController.js"></script>
-<script src="../public/js/controllers/userAuthController.js"></script>
-<script src="../public/js/controllers/userPreference.js"></script>
-<script src="../public/js/controllers/signupPreference.js"></script>
-
-
-<script>
-    $(document).foundation();
-</script>
-</body>
-
-</html>
 
 
 

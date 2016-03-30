@@ -1,0 +1,150 @@
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- Tabs Menu -->
+<section class="inner-menu">
+    <div class="row">
+        <ul class="menu button-group round even-4">
+            <li><a class="button" href="#user-profile">Profile</a></li>
+            <li><a class="button" href="#edit-profile">Edit Profile</a></li>
+            <li><a class="button" href="#inbox">Inbox</a></li>
+            <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
+        </ul>
+    </div>
+
+</section>
+
+<section class="main row">
+    <!-- User details -->
+    <section class="row profile">
+        <section class="column">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li>Edit Profile</li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#">Save all</a>
+                        <!--- (Save all data edited) and display a small pop up success message --->
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <div id="panel1">
+            <section class="large-3 columns">
+                <img class="thumbnail" src="public/img/users_profile_images/student-1.jpg">
+                <label for="profileImage" class="button">Upload image</label>
+                <input type="file" id="profileImage" class="show-for-sr">
+                <input type="text" placeholder="User name">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </section>
+
+            <!-- Text Area (User preference) -->
+            <section class="large-9 columns">
+                <label>Preference
+                    <textarea placeholder="About you..." name="text" cols="30" rows="4"></textarea>
+                </label>
+
+                <label>Personality
+                    <select>
+                        <option value="quiet">Quiet</option>
+                        <option value="friendly">Outgoing</option>
+                        <option value="shy">Shy but friendly</option>
+                    </select>
+                </label>
+                <label>Smoking
+                    <select>
+                        <option value="frequentSmoker">Frequently</option>
+                        <option value="nonSmoker">None</option>
+                        <option value="occasionalSmoker">Social drinker</option>
+                    </select>
+                </label>
+
+                <label>Tidiness
+                    <select>
+                        <option value="frequentSmoker">Tidy</option>
+                        <option value="nonSmoker">Somewhat</option>
+                        <option value="occasionalSmoker">Don't care</option>
+                    </select>
+                </label>
+
+                <label>Partying
+                    <select>
+                        <option value="frequent">Frequently</option>
+                        <option value="nonParty">None</option>
+                        <option value="occasional">Occasional</option>
+                        <option value="careless">Don't care</option>
+                    </select>
+                </label>
+
+                <label>Drinking
+                    <select>
+                        <option value="frequentSmoker">Frequently</option>
+                        <option value="nonSmoker">No drinking</option>
+                        <option value="occasionalSmoker">Don't care</option>
+                    </select>
+                </label>
+            </section>
+        </div>
+        <!-- End of user details -->
+
+
+        <!-- IMPORTANT NOT ABOUT THIS SECTION
+
+        Apartment Details
+
+        When the user selects the check as having a room, the user
+        will be able to to upload their room images on the app.
+
+        Requirements for images are,
+        Bedroom image
+        Kitchen
+        Living room and maybe the outside of the
+        apartment or anything like swimming pool
+
+
+        -->
+
+    </section>
+
+    <!-- Apartment edits -->
+    <section class="row profile">
+        <div class="column">
+            <h6>Edit Apartment</h6>
+        </div>
+        <hr>
+        <section class="column " id="panel2">
+            <section class="large-3 columns">
+                <div class="apartment-data">
+                    <input type="text" placeholder="Apartment name">
+                    <input type="number" placeholder="Lease term ">
+                    <input type="number" placeholder="Lease price">
+                    <input type="text" placeholder="Location ">
+
+                </div>
+            </section>
+
+            <section class="large-9 columns">
+                <h6 for="uploadRoomImage" class="button">Upload File</h6>
+                <input type="file" id="uploadRoomImage" class="show-for-sr">
+
+                <div class="row small-up-2 large-up-4" role="region">
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+                    </div>
+
+                    <div class="column">
+                        <img class="thumbnail"
+                             src="public/img/users_profile_images/room-images/living-room.jpeg">
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+</section>
+
+
+<!-------------------------------------------------------------------------------------->

@@ -10,30 +10,45 @@ var roomly = angular.module('roomly', ['ui.router']);
 roomly.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/register');
+        $urlRouterProvider.otherwise('/main');
         $stateProvider
-        // route for the about page
-            .state('/about', {
-                url: '/about',
-                templateUrl: 'views/about.html',
-                controller: 'AboutController'
+            .state('/main', {
+                url: '/main',
+                templateUrl: 'views/main.html',
+                controller: 'mainController'
             })
 
+            .state('/authsignup', {
+                url: '/authsignup',
+                templateUrl: 'views/auth-signup.html',
+                controller: 'userAuthentication'
+            })
+
+            .state('/display-user', {
+                url: '/display-user',
+                templateUrl: 'views/display-user.html',
+                controller: 'crudUserController'
+            })
+            .state('/edit-profile', {
+                url: '/edit-profile',
+                templateUrl: 'views/edit-profile.html',
+                controller: 'crudUserController'
+            })
+
+            .state('/user-profile', {
+                url: '/user-profile',
+                templateUrl: 'views/user-profile.html',
+                controller: 'crudUserController'
+            })
+
+            .state('/inbox', {
+                url: '/inbox',
+                templateUrl: 'views/inbox.html',
+                controller: 'messageController'
+            })
 
     }]);
 
-roomly.run(function ($rootScope, $location, loginService) {
-    var routespermission = ['/register'];  //route that require login
-    $rootScope.$on('$routeChangeStart', function () {
-
-        if (routespermission.indexOf($location.path()) != -1) {
-            var connected = loginService.islogged();
-            connected.then(function (msg) {
-                if (!msg.data) $location.path('/login');
-            });
-        }
-    });
-});
 
 
 

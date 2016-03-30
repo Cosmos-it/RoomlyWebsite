@@ -4,7 +4,8 @@
  *
  */
 
-roomly.controller('UserPreference', function ($scope, $http, $state) {
+roomly.controller('crudUserController', function ($scope, $http, $state) {
+
     $scope.info = {
         price: undefined,
         location: undefined,

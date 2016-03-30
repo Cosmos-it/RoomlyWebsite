@@ -7,7 +7,8 @@
 
 /*  Login controller */
 
-roomly.controller("userController", function ($scope, $http, $state) {
+
+roomly.controller("userAuthentication", function ($scope, $http, $state) {
 
     //Login information
     $scope.loginInfo = {
@@ -61,4 +62,61 @@ roomly.controller("userController", function ($scope, $http, $state) {
             console.error(error);
         });
     };
+
+    $scope.signUpInfo = {
+        firstName: undefined,
+        lastName: undefined,
+        email: undefined,
+        password: undefined,
+        confirmPassword: undefined,
+        roomOwner: 0
+    };
+
+    /* Sign up */
+
+    /**
+     *=======================================================
+     * validate user inputs before passing data to the server
+     * The server will do another validation and send error
+     * if the user is already registered or a some how the it
+     * by pass the client side validation in case of hacking.
+     *
+     * display message to all the fields if they are empty.
+     *
+     *=======================================================
+     */
+    $scope.signUp = function () {
+        var data = {
+
+            firstName: $scope.signUpInfo.firstName,
+            lastName: $scope.signUpInfo.lastName,
+            email: $scope.signUpInfo.email,
+            password: $scope.signUpInfo.password,
+            confirmPassword: $scope.signUpInfo.confirmPassword,
+            roomOwner: $scope.signUpInfo.roomOwner
+
+        };
+
+        if (data.firstName == undefined) {
+
+        }
+
+        /**=====================================================
+         * Post information to the server
+         *=====================================================*/
+        $http.post("../Includes_PHP/API/userRegistration.api.php", data).success(function (response) {
+            console.log(" Test " + response[0]);
+            localStorage.setItem("uid", JSON.stringify(response));
+            $state.go("/editProfile");
+
+        }).error(function (error) {
+            console.log(error);
+
+        })
+
+    }; //End of sign up
+
+
+
+
 });

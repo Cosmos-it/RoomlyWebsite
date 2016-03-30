@@ -1,50 +1,12 @@
-<!doctype html>
-<!-- Roommate search application. The app is build to target students within smaller town -->
-
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Roomly | Welcome</title>
-    <link rel="stylesheet" href="../public/foundation-6-2/css/foundation.min.css">
-    <link rel="stylesheet" href="../public/foundation-6-2/css/custom.css">
-    <link rel="stylesheet" href="../public/foundation-6-2/css/inbox-css.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
-          type='text/css'>
-</head>
-
-</head>
-
-<body>
-
-<!-- MENU TOP BAR -->
-<section class="top-bar">
-    <div class="top-bar-left">
-        <ul class="menu">
-            <li class="menu-text"><img style="width:50%;" src="../public/img/roomly-logo.png"></li>
-        </ul>
-    </div>
-    <div class="top-bar-right">
-        <ul class="menu">
-            <li><a href="#">Help?</a></li>
-            <li><a href="#" data-open="signUpModal">Sign up</a></li>
-            <li><a href="#" data-open="loginModal">Login</a>
-        </ul>
-    </div>
-</section>
-
-<!-- END OF TOP-MENU-BAR-->
-
-
 <!------------------------------------------------------------------------------------------------------------>
 
 <!-- Tabs Menu -->
 <section class="inner-menu">
     <div class="row button-group round even-4">
-        <ul class="menu ">
-            <li class=""><a class="button" href="#user-profile">Profile</a></li>
-            <li class=""><a class="button" href="#edit-user">Edit</a></li>
-            <li class=""><a class="button" href="#inbox">Inbox</a></li>
+        <ul class="menu">
+            <li><a class="button" href="#user-profile">Profile</a></li>
+            <li><a class="button" href="#edit-profile">Edit Profile</a></li>
+            <li><a class="button" href="#inbox">Inbox</a></li>
             <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
         </ul>
     </div>
@@ -62,7 +24,8 @@
         <section class="column">
             <div class="top-bar-left">
                 <ul class="menu">
-                    <li>Looking for a roommate</li> <!--  This data here changes ( USER CAN HAVE ROOM OR NOT HAVE A ROOM )-->
+                    <li>Looking for a roommate</li>
+                    <!--  This data here changes ( USER CAN HAVE ROOM OR NOT HAVE A ROOM )-->
                 </ul>
             </div>
             <div class="top-bar-right">
@@ -70,15 +33,16 @@
                     <li><a href="#inbox.html">Send message</a> <!--- (ALLOWS USER TO SEND MESSAGE TO ANOTHER USER --->
                 </ul>
             </div>
+            <hr/>
+
         </section>
-        <hr/>
 
         <section id="panel1">
             <div class="large-3  columns">
                 <div class="fieldset">
                     <!-- The values for this will be read from the database--->
 
-                    <img class="thumbnail" src="../public/img/users_profile_images/student-1.jpg">
+                    <img class="thumbnail" src="public/img/users_profile_images/student-1.jpg">
                     <h6>Nataliya Jones</h6>
                     <h6>Looking for a roommate</h6>
 
@@ -91,9 +55,12 @@
             -->
             <section class="large-9 columns">
                 <section class="fieldset">
-                    <h6>Preference</h6>
-                    <hr/>
-
+                    <div class="row">
+                        <div class="column">
+                            <h6>Preference</h6>
+                        </div>
+                        <hr/>
+                    </div>
                     <div class="preference">
                         <p>
                             Non nulla arbitror probant, si elit ingeniis ingeniis. Mandaremus summis lorem
@@ -167,8 +134,8 @@
     <section class="row profile">
         <section class="columns">
             <h6>Apartment details</h6>
+            <hr/>
         </section>
-        <hr/>
 
         <section class="column" id="panel2">
             <section class="large-3 fieldset columns">
@@ -187,21 +154,21 @@
                     <!-- Read all images from the database -->
                     <div class="column">
                         <img class="thumbnail"
-                             src="../public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
+                             src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
                     </div>
 
                     <div class="column">
                         <img class="thumbnail"
-                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                             src="public/img/users_profile_images/room-images/living-room.jpeg">
                     </div>
                     <div class="column">
                         <img class="thumbnail"
-                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                             src="public/img/users_profile_images/room-images/living-room.jpeg">
                     </div>
 
                     <div class="column">
                         <img class="thumbnail"
-                             src="../public/img/users_profile_images/room-images/living-room.jpeg">
+                             src="public/img/users_profile_images/room-images/living-room.jpeg">
                     </div>
                 </div>
             </section>
@@ -212,52 +179,3 @@
 
 
 <!-------------------------------------------------------------------------------------->
-
-<!--    FOOTER  -->
-<section id="footer" class=" allout large secondary ">
-    <div class="row">
-        <div class="large-4 columns">
-            <p>Roomly.Space</p>
-            <p>Your one stop shop for a roommate and or a room space has now been easier.</p>
-        </div>
-
-        <div class="large-3 large-offset-2 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Our platform</a></li>
-                <li><a href="#">How it works</a></li>
-            </ul>
-        </div>
-
-        <!-- Link menu to respective pages -->
-        <div class="large-3 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </div>
-        <div class="columns" style="text-align: center; font-size: small">
-            <p>&#169; RoomlySpace&#0153;, Inc 2016 </p>
-        </div>
-    </div>
-</section>
-
-<!-- END OF FOOTER -->
-
-<!----------------------------------------------------------------------------------------->
-
-
-<script src="../public/foundation-6-2/js/vendor/jquery.min.js"></script>
-<script src="../public/foundation-6-2/js/foundation.min.js"></script>
-
-<script>
-
-</script>
-<script>
-    $(document).foundation();
-</script>
-</body>
-
-</html>
