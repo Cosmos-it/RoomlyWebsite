@@ -34,7 +34,7 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
                 console.log(" Test " + response);
                 localStorage.setItem("token", JSON.stringify(response));
                 if (response === "Error") {
-                    $state.go("/login");
+                    $state.go("/authsignup");
 
                 } else {
                     $state.go("/main");
@@ -53,10 +53,11 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         var data = {
             token: token
         };
+
         $http.post("../includes/API/logout.api.php", data).success(function (response) {
             console.log(" Test " + response);
             localStorage.clear();
-            $state.go("/login");
+            $state.go("/authsignup");
 
         }).error(function (error) {
             console.error(error);
@@ -98,8 +99,22 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         };
 
         if (data.firstName == undefined) {
-
+            $scope.firstnameERROR = "field cannot be empty"
         }
+
+        if (data.lastName == undefined) {
+            $scope.lastnameERROR = "field cannot be empty";
+        }
+
+
+        if (data.email == undefined) {
+            $scope.emailERROR = "field cannot be empty";
+        }
+
+        if (data.password == undefined) {
+            $scope.passwordError = "field cannot be empty";
+        }
+
 
         /**=====================================================
          * Post information to the server
@@ -107,7 +122,7 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         $http.post("../Includes_PHP/API/userRegistration.api.php", data).success(function (response) {
             console.log(" Test " + response[0]);
             localStorage.setItem("uid", JSON.stringify(response));
-            $state.go("/editProfile");
+            $state.go("/main");
 
         }).error(function (error) {
             console.log(error);
@@ -115,8 +130,6 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         })
 
     }; //End of sign up
-
-
 
 
 });

@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="public/foundation-6-2/css/inbox-css.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
           type='text/css'>
-    <!-- Angular scripts -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald|Montserrat:400,700|Candal|Bitter' rel='stylesheet'
+          type='text/css'>    <!-- Angular scripts -->
     <script src="public/angular-js/bower_components/angular/angular.min.js"></script>
     <script src="public/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <!--<script data-require="angular.js@1.2.10" data-semver="1.2.10"-->
-    <!--src="http://code.angularjs.org/1.2.10/angular.js"></script>-->
-    <!--<script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>-->
 
 </head>
 
@@ -26,17 +24,16 @@
 <!-- MENU TOP BAR -->
 <section class="top-bar">
     <div class="row">
-            <div class="top-bar-left">
-                <a href="#"><img style="width:100px; padding: 5px;" src="public/img/roomly-logo.png"></a>
-            </div>
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li><a href="#help">Help?</a></li>
-                    <li><a href="#authsignup">Sign up</a></li>
-                    <li><a href="#authsignup">Login</a>
-                </ul>
-            </div>
+        <div class="top-bar-left">
+            <a href="#"><img style="width:100px; padding: 5px;" src="public/img/roomly-logo.png"></a>
         </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#help">Help</a></li>
+                <li><a href="#authsignup">Account</a></li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <!-- END OF TOP-MENU-BAR-->
@@ -96,6 +93,8 @@
 <script src="public/js/controllers/browseApartmentController.js"></script>
 <script src="public/js/controllers/userAuthController.js"></script>
 <script src="public/js/controllers/userPreference.js"></script>
+<script src="public/js/controllers/app_help_controller.js"></script>
+
 
 <script>
     $(document).foundation();
