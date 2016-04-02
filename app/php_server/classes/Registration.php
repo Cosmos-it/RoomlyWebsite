@@ -6,13 +6,14 @@
  * Date: 8/21/15
  * Time: 1:55 PM
  ****************************/
+
+require ("Database/LocalDatabase.php");
 require("Interfaces/Registration.Interface.php");
 
 class Registration implements Registration_Interface
 {
 
     private $user_id;
-    private $username;
     private $firstName;
     private $lastName;
     private $email;
@@ -119,7 +120,6 @@ class Registration implements Registration_Interface
          * 0 = not room owner
          *
          */
-
         if (is_int($roomStatus) && !is_null($roomStatus)) {
             switch ($roomStatus) {
                 case 1:
@@ -144,7 +144,6 @@ class Registration implements Registration_Interface
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
         return $this->firstName . " " . $this->lastName;
     }
 }

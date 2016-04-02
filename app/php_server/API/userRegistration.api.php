@@ -15,7 +15,7 @@ include("../classes/Registration.php");
 $database = LocalDatabase::getInstance();
 $connection =& $database->getConnection();
 
-//$data = json_decode(file_get_contents("php://input"));
+$data = json_decode(file_get_contents("php://input"));
 
 $query;
 
@@ -23,11 +23,11 @@ try {
     //Registration object
     $createUser = new Registration();
 
-//    $firstName = $data->firstName;
-//    $lastName = $data->lastName;
-//    $email = $data->email;
-//    $password = $data->password;
-//    $roomStatus = $data->roomOwner;
+    $firstName = $data->firstName;
+    $lastName = $data->lastName;
+    $email = $data->email;
+    $password = $data->password;
+    $roomStatus = $data->roomOwner;
     //user profile image
 
     /**
@@ -35,13 +35,13 @@ try {
      * 1 = room owner
      * 0 = not a room owner.
      */
-//    $checkedStatus = 0;
-//
-//    if ($roomStatus == true) {
-//        $checkedStatus = 1;
-//    } else {
-//        $checkedStatus = 0;
-//    }
+    $checkedStatus = 0;
+
+    if ($roomStatus == true) {
+        $checkedStatus = 1;
+    } else {
+        $checkedStatus = 0;
+    }
 
     //Set values
     $createUser->setFirstName("Latio");

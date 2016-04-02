@@ -1,8 +1,12 @@
 /**
+ *==============================================================
  * Created by Taban on 3/2/16.
  *
- *
+ *==============================================================
  */
+
+
+
 
 roomly.controller('crudUserController', function ($scope, $http, $state) {
 
@@ -15,10 +19,9 @@ roomly.controller('crudUserController', function ($scope, $http, $state) {
         image: undefined
     };
 
-    /**================================
-     * Next button to submit data
-     * */
-    $scope.next = function () {
+    /**=========================================================*/
+
+    $scope.addApartmentInfo = function () {
         var data = {
             price: $scope.info.price,
             location: $scope.info.location,
@@ -26,15 +29,18 @@ roomly.controller('crudUserController', function ($scope, $http, $state) {
             apartment: $scope.info.apartment,
             userDescription: $scope.info.userDescription,
             image: $scope.info.image
-
         };
 
-        $http.post("../php_server/API/Preference.api.php", data).success(function (response) {
+        $http.post("../php_server/API/Preference.api.php", data)
+            .success(function (response) {
 
 
-        })
+            })
 
-    };
+        $scope.updateApartmentInfo = function () {
+
+        }
+    }
 
 
 });
