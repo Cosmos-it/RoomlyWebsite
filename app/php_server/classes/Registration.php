@@ -7,7 +7,6 @@
  * Time: 1:55 PM
  ****************************/
 
-require ("Database/LocalDatabase.php");
 require("Interfaces/Registration.Interface.php");
 
 class Registration implements Registration_Interface
@@ -23,10 +22,10 @@ class Registration implements Registration_Interface
     public function __constructor()
     {
         $this->user_id = null;
-        $this->firstName = null;
-        $this->lastName = null;
-        $this->email = null;
-        $this->password = null;
+        $this->firstName = " ";
+        $this->lastName = " ";
+        $this->email = " ";
+        $this->password = " ";
         $this->roomStatus = 0;
     }
 
@@ -44,27 +43,18 @@ class Registration implements Registration_Interface
         return $this->user_id;
     }
 
-    public function setFirstName($firstName)
-    {
-        if (is_string($firstName) && !is_null($firstName)) {
-            $this->firstName = $firstName;
-        } else {
-            throw new Exception("Type string expected and Null, found: " . $firstName);
-        }
-    }
-
     public function getFirstName()
     {
 
         return $this->firstName;
     }
 
-    public function setLastName($lastName)
+    public function setFirstName($firstName)
     {
-        if (is_string($lastName) && !is_null($lastName)) {
-            $this->lastName = $lastName;
+        if (is_string($firstName) && !($firstName == "")) {
+            $this->firstName = $firstName;
         } else {
-            throw new Exception("Type string expected and not null, found:  " . $lastName);
+            throw new Exception("Type string expected and Null, found: " . $firstName);
         }
     }
 
@@ -74,20 +64,12 @@ class Registration implements Registration_Interface
         return $this->lastName;
     }
 
-    public function setEmail($email)
+    public function setLastName($lastName)
     {
-        /* Valid the email to make sure that a valid email works.
-        Use regular expressions to match the email and also check to see if the email
-        exist in a smtp email server.
-        */
-        //  if ($email) {
-        //
-        //    }
-
-        if (is_string($email) && !is_null($email)) {
-            $this->email = $email;
+        if (is_string($lastName) && !($lastName == "")) {
+            $this->lastName = $lastName;
         } else {
-            throw new Exception("Type string expected and not null, found:  " . $email);
+            throw new Exception("Type string expected and not null, found:  " . $lastName);
         }
     }
 
@@ -96,14 +78,19 @@ class Registration implements Registration_Interface
         return $this->email;
     }
 
-    public function setPassword($password)
+    public function setEmail($email)
     {
+        /**===============================================
+         * Valid the email to make sure that it is a valid
+         *
+         *================================================
+         **/
 
-        /** Password must be encrypted before app release using MD5 **/
-        if (is_string($password) && !is_null($password)) {
-            $this->password = $password;
+
+        if (is_string($email) && !($email == "")) {
+            $this->email = $email;
         } else {
-            throw new Exception("Type string expected and not null, found:  " . $password);
+            throw new Exception("Type string expected and not null, found:  " . $email);
         }
     }
 
@@ -112,15 +99,34 @@ class Registration implements Registration_Interface
         return $this->password;
     }
 
+    public function setPassword($password)
+    {
+
+        /**==========================================================
+         * Password must be encrypted before app release using MD5
+         *=========================================================*/
+        if (is_string($password) && !($password == "")) {
+            $this->password = $password;
+        } else {
+            throw new Exception("Type string expected and not null, found:  " . $password);
+        }
+    }
+
+    public function getRoomStatus()
+    {
+        return $this->roomStatus;
+    }
+
     public function setRoomStatus($roomStatus)
     {
-        /**
+        /**================================================
          * Verify if user is a room owner
          * 1 = room owner
          * 0 = not room owner
-         *
+         *================================================
          */
-        if (is_int($roomStatus) && !is_null($roomStatus)) {
+        if (is_int($roomStatus) && !($roomStatus == "")) {
+
             switch ($roomStatus) {
                 case 1:
                     $this->roomStatus = $roomStatus;
@@ -135,11 +141,6 @@ class Registration implements Registration_Interface
         } else {
             throw new Exception("Type int expected and not null, found:  " . $roomStatus);
         }
-    }
-
-    public function getRoomStatus()
-    {
-        return $this->roomStatus;
     }
 
     public function getUsername()

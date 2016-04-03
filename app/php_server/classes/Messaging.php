@@ -16,6 +16,11 @@ class Messaging implements Messaging_Interface
     private $receivedDate;
     private $mContent = " ";
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function setId($_id)
     {
         if (is_int($_id) && !is_null($_id)) {
@@ -25,9 +30,9 @@ class Messaging implements Messaging_Interface
         }
     }
 
-    public function getId()
+    public function getSendDate()
     {
-        return $this->id;
+        return $this->sendDate;
     }
 
     public function setSendDate($date)
@@ -37,11 +42,6 @@ class Messaging implements Messaging_Interface
         } else {
             throw new Exception("Type date expected and not null, found:  " . $date);
         }
-    }
-
-    public function getSendDate()
-    {
-        return $this->sendDate;
     }
 
     public function setReceiveDate($date)

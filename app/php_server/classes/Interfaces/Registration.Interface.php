@@ -15,29 +15,29 @@
 interface Registration_Interface
 {
 
-	public function setId($id);
+    public function setId($id);
 
-	public function getId();
+    public function getId();
 
-	public function getUsername();
+    public function getUsername();
 
-	public function setFirstName($firstName);
+    public function setFirstName($firstName);
 
-	public function getFirstName();
+    public function getFirstName();
 
-	public function setLastName($lastName);
+    public function setLastName($lastName);
 
-	public function getLastName();
+    public function getLastName();
 
-	public function setEmail($email);
+    public function setEmail($email);
 
-	public function getEmail();
+    public function getEmail();
 
-	public function setPassword($password);
+    public function setPassword($password);
 
-	public function getPassword();
+    public function getPassword();
 
-	public function setRoomStatus($roomStatus);
+    public function setRoomStatus($roomStatus);
 
-	public function getRoomStatus();
+    public function getRoomStatus();
 }

@@ -7,5 +7,5 @@
  *
  */
 if (isset($_SESSION['uid'])) {
-    echo ($_SESSION['uid']);
+    echo($_SESSION['uid']);
 }

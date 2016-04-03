@@ -2,7 +2,7 @@
 
 /*
 /****************************
- * Created by PhpStorm.
+ * Created by Taban Cosmos.
  * User: Taban
  * Date: 8/21/15
  * Time: 5:44 PM
@@ -54,20 +54,13 @@ class LocalDatabase
         return self::$_instance;
     }
 
-    /****************************************
-     * Magic method clone is empty to prevent duplication of connection
-     */
-    private function __clone()
-    {
-    }
-
-    /* Return a connection */
     public function getConnection()
     {
         return $this->_connection;
     }
 
-    /* close database connection*/
+    /* Return a connection */
+
     public function closeDBConnection()
     {
         if (isset($this->_connection)) {
@@ -76,32 +69,37 @@ class LocalDatabase
         }
     }
 
-    /* insert by id */
+    /* close database connection*/
+
     public function insert_id()
     {
         //get the last id inserted over the current db
         return mysqli_insert_id($this->_connection);
     }
 
-    /* affected rows*/
+    /* insert by id */
+
     public function affected_rows()
     {
         return mysqli_affected_rows($this->_connection);
     }
 
-    /* fetch array*/
+    /* affected rows*/
+
     public function fetch_array($result)
     {
         return mysqli_fetch_array($result);
     }
 
-    /* Escape characters */
+    /* fetch array*/
+
     public function escape_value($string)
     {
         return mysqli_real_escape_string($this->_connection, $string);
     }
 
-    /* Query the database */
+    /* Escape characters */
+
     public function query_db($sql)
     {
         $this->last_query = $sql;
@@ -110,6 +108,8 @@ class LocalDatabase
 
         return $result;
     }
+
+    /* Query the database */
 
     /************************************
      * function from (Includes_PHP) Checks
@@ -122,7 +122,7 @@ class LocalDatabase
         if (!$result) {
             $output = "Database query failed: " . mysqli_error($this->_connection) . "<br /><br />";
             //$output .= "Last SQL query: " . $this->last_query;
-            die( $output );
+            die($output);
         }
     }
 
@@ -133,6 +133,13 @@ class LocalDatabase
         $json = json_encode($result);
 
         return $json;
+    }
+
+    /****************************************
+     * Magic method clone is empty to prevent duplication of connection
+     */
+    private function __clone()
+    {
     }
 }
 

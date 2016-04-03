@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Created by PhpStorm.
+ * Created by Taban Cosmos.
  * User: Taban
  * Date: 9/24/15
  * Time: 12:50 PM
@@ -11,8 +11,6 @@ require("../Auto-Load.php");
 
 class MatchingAlgorithmDev
 {
-
-
 
 
     /** To accomplish this algorithm, what is needed.
@@ -82,10 +80,22 @@ class MatchingAlgorithmDev
          * string processing.
          *
          */
-        $this->database = LocalDatabase::getInstance(); /** Assign database object to database */
-        $this->connection =& $this->database->getConnection(); /** Save database connection */
+        $this->database = LocalDatabase::getInstance();
+        /** Assign database object to database */
+        $this->connection =& $this->database->getConnection();
+        /** Save database connection */
 
     }
+
+    public function returnData()
+    {
+
+        if ($this->connection)
+            return 0;
+        return 1;
+    }
+
+    /* Strip widespace from a long text fro va*/
 
     private function matchingAlgorithm()
     {
@@ -94,7 +104,8 @@ class MatchingAlgorithmDev
         $preference = null;
     }
 
-    /* Strip widespace from a long text fro va*/
+    //Test purpose
+
     private function strip_wideSpace($data)
     {
 
@@ -104,16 +115,7 @@ class MatchingAlgorithmDev
 
     }
 
-    //Test purpose
-    public function returnData(){
-
-        if ($this->connection)
-            return 0;
-        return 1;
-    }
-
 }
-
 
 
 $matchingAl = new MatchingAlgorithmDev();

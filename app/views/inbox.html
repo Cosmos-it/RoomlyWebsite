@@ -1,22 +1,12 @@
-<!------------------------------------------------------------------------------------------------------------>
-
-
+<!------------------------------------------------
+  INBOX
+------------------------------------------------------------>
 <!-- Tabs Menu -->
 <section ng-controller="messageController">
-    <section class="inner-menu">
-        <div class="row">
-            <ul class="menu button-group round even-4">
-                <li><a class="button" href="#user-profile">Profile</a></li>
-                <li><a class="button" href="#edit-profile">Edit Profile</a></li>
-                <li><a class="button" href="#">Inbox</a></li>
-            </ul>
-        </div>
-    </section>
-
-
+    <section ng-include="'views/sub-nav.html'"></section>
     <section class="main">
         <!-- User details -->
-        <div class="row profile">
+        <div class="row profile shadow">
             <div class="column">
                 <h6>Inbox</h6>
             </div>

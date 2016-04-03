@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Taban
  * Date: 3/22/16
  * Time: 9:04 PM
  */
-
-Interface PreferenceInterface {
+Interface PreferenceInterface
+{
 
     public function setId($id);
 

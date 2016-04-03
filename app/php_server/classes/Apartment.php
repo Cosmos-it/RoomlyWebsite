@@ -28,6 +28,12 @@ class Apartment implements Apartment_InterFace
         $this->leaseTerm = 0;
     }
 
+    public function getPrice()
+    {
+
+        return $this->price;
+    }
+
     public function setPrice($price)
     {
 
@@ -38,12 +44,11 @@ class Apartment implements Apartment_InterFace
         }
     }
 
-    public function getPrice()
+    public function getImage()
     {
 
-        return $this->price;
+        return $this->image;
     }
-
 
     /**Check this implement later during image upload.
      *================================================
@@ -62,12 +67,11 @@ class Apartment implements Apartment_InterFace
         }
     }
 
-    public function getImage()
+    public function getLeaseTerm()
     {
 
-        return $this->image;
+        return $this->leaseTerm;
     }
-
 
     public function setLeaseTerm($lease)
     {
@@ -79,10 +83,10 @@ class Apartment implements Apartment_InterFace
         }
     }
 
-    public function getLeaseTerm()
+    public function getAptName()
     {
 
-        return $this->leaseTerm;
+        return $this->apt_name;
     }
 
     public function setAptName($apt_name)
@@ -95,10 +99,10 @@ class Apartment implements Apartment_InterFace
         }
     }
 
-    public function getAptName()
+    public function getLocation()
     {
 
-        return $this->apt_name;
+        return $this->location;
     }
 
     public function setLocation($location)
@@ -109,12 +113,6 @@ class Apartment implements Apartment_InterFace
         } else {
             throw new Exception("Type location expected and not null, found: " . $location);
         }
-    }
-
-    public function getLocation()
-    {
-
-        return $this->location;
     }
 }
 

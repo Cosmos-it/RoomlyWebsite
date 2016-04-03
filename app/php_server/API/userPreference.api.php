@@ -1,4 +1,10 @@
 <?php
+/*****************************************************************
+ * Created by Taban Cosmos.
+ * User: Taban
+ * Date: 9/21/15
+ * Time: 9:03 PM
+ *****************************************************/
 
 /*****************************************************
  * This API inserts data into the database
@@ -8,13 +14,7 @@
  *      database
  *      Sending the result back to frontend so that
  *      a friendly message can be display to the users.
- *
- *****************************************************************
- * Created by PhpStorm.
- * User: Taban
- * Date: 9/21/15
- * Time: 9:03 PM
- ****************************/
+ ******************************************************/
 
 /****** IMPORT FILES ******/
 require_once("../Auto-Load.php");
@@ -86,23 +86,17 @@ function insertPreferenceData($database)
 function returnData()
 {
     global $connection;
-
     /** Query */
     $query = "SELECT * FROM userPreference";
-
     try {
-
         $result = mysqli_query($connection, $query);
         confirm_query($result, $connection);
         //New data converted into array
         $array_data = array();
-
         while ($row = mysqli_fetch_assoc($result)) {
             $array_data[] = $row;
         }
-
         /**
-         *
          * encode the data into array.
          * The data is returned as a json encoded
          * data.
@@ -112,12 +106,8 @@ function returnData()
         $json = json_encode($array_data);
 
         echo $json;
-
-
     } catch (PDOException $e) {
         echo $query . "<br>" . $e->getMessage();
     }
-
     $connection = null;//Close database connection
-
 }

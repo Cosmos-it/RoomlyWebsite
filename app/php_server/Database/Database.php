@@ -1,17 +1,16 @@
 <?php
 
 /**
- * Created by PhpStorm.
+ * Created by Taban Cosmos.
  * User: Taban
  * Date: 8/21/15
  * Time: 5:44 PM
  */
 class Database
 {
-
     /* Database field definition */
-    private $url = null;
-    private static $_instance; //The single instance
+    private static $_instance;
+    private $url = null; //The single instance
     private $_connection;
     private $DB_USER;
     private $DB_PASS;
@@ -56,30 +55,26 @@ class Database
         return self::$_instance;
     }
 
-    /****************************************
-     * Magic method clone is empty to prevent duplication of connection
-     *******************************************************************/
-    private function __clone()
-    {
-
-    }
-
-    /* Return a connection */
     public function getConnection()
     {
-
         return $this->_connection;
     }
 
-    /* Closes data connection after usage */
+    /* Return a connection */
+
     public function closeDBConnection()
     {
-
         $connection = $this->_connection;
         if (isset($connection)) {
             mysqli_close($connection);
         }
     }
+    /* Closes data connection after usage */
 
-
+    /****************************************
+     * Magic method clone is empty to prevent duplication of connection
+     *******************************************************************/
+    private function __clone()
+    {
+    }
 }

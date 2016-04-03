@@ -5,24 +5,23 @@ roomly.controller('messageController', function ($scope, $http) {
 
     var message = {};
 
-    var dataTosend  = {
+    var dataTosend = {
         title: undefined,
         messageBody: undefined
     }
 
-    $scope.send = function() {
+    $scope.send = function () {
 
         /**   Send message to the user **/
     }
-    
+
     $scope.deleteMessage = function () {
-        
+
     }
 
     $scope.allMessages = function () {
-        
-    }
 
+    }
 
 
 });

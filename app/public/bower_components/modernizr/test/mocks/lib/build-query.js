@@ -1,5 +1,5 @@
-define([], function() {
-  return function() {
-    return '?--dontmin';
-  };
+define([], function () {
+    return function () {
+        return '?--dontmin';
+    };
 });

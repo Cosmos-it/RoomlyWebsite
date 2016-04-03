@@ -15,19 +15,19 @@
 interface Messaging_Interface
 {
 
-	public function setId($_id);
+    public function setId($_id);
 
-	public function getId();
+    public function getId();
 
-	public function setSendDate($date);
+    public function setSendDate($date);
 
-	public function getSendDate();
+    public function getSendDate();
 
-	public function setReceiveDate($date);
+    public function setReceiveDate($date);
 
-	public function getReceiveDate();
+    public function getReceiveDate();
 
-	public function setContent($messageContent);
+    public function setContent($messageContent);
 
-	public function getContent();
+    public function getContent();
 }

@@ -9,21 +9,23 @@
 interface Apartment_InterFace
 {
 
-	public function setImage($image);
-	public function getImage();
+    public function setImage($image);
 
-	public function setPrice($price);
-	public function getPrice();
+    public function getImage();
 
-	public function setLeaseTerm($lease);
+    public function setPrice($price);
 
-	public function getLeaseTerm();
+    public function getPrice();
 
-	public function setAptName($apt_name);
+    public function setLeaseTerm($lease);
 
-	public function getAptName();
+    public function getLeaseTerm();
 
-	public function setLocation($location);
+    public function setAptName($apt_name);
 
-	public function getLocation();
+    public function getAptName();
+
+    public function setLocation($location);
+
+    public function getLocation();
 }

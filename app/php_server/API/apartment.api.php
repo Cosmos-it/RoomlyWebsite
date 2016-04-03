@@ -1,6 +1,6 @@
 <?php
 /**********************
- * Created by PhpStorm.
+ * Created by Taban Cosmos.
  * User: Taban
  * Date: 9/21/15
  * Time: 9:03 PM
@@ -24,8 +24,6 @@ require_once("../classes/Apartment.php");
  *      a friendly message can be display to the users.
  *
  *****************************************************************/
-
-
 
 /** Database connections **/
 
@@ -86,7 +84,7 @@ function insertApartmentInfo($connection, $database)
 
     echo "Success";
 
-        /*Database connection closed*/
+    /*Database connection closed*/
 
 }
 

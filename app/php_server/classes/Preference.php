@@ -13,103 +13,108 @@ require("Interfaces/Preference_Interface.php");
 class userPreference implements PreferenceInterface
 {
 
-	private $id;
-	private $smoking;
-	private $partying;
-	private $hygiene;
-	private $drinking;
+    private $id;
+    private $smoking;
+    private $partying;
+    private $hygiene;
+    private $drinking;
     private $about;
 
-	public function __construct()
-	{
+    public function __construct()
+    {
 
-		$this->id = null;
-		$this->smoking = null;
-		$this->partying = null;
-		$this->hygiene = null;
-		$this->drinking = null;
-		$this->about = null;
-	}
+        $this->id = null;
+        $this->smoking = null;
+        $this->partying = null;
+        $this->hygiene = null;
+        $this->drinking = null;
+        $this->about = null;
+    }
 
-	public function setId($id)
-	{
+    public function getId()
+    {
 
-		if (is_int($id) && !is_null($id)) {
-			$this->id = $id;
-		} else {
-			throw new Exception("Type int expected and not nul, found: " . $id);
-		}
-	}
+        return $this->id;
+    }
 
-	public function getId()
-	{
+    public function setId($id)
+    {
 
-		return $this->id;
-	}
+        if (is_int($id) && !is_null($id)) {
+            $this->id = $id;
+        } else {
+            throw new Exception("Type int expected and not nul, found: " . $id);
+        }
+    }
 
-	public function setSmokeStatus($smoking)
-	{
+    public function setSmokeStatus($smoking)
+    {
 
-		if (is_int($smoking) && !is_null($smoking)) {
-			$this->smoking = $smoking;
-		} else {
-			throw new Exception("Type int expected and not null, found: " . $smoking);
-		}
+        if (is_int($smoking) && !is_null($smoking)) {
+            $this->smoking = $smoking;
+        } else {
+            throw new Exception("Type int expected and not null, found: " . $smoking);
+        }
 
-	}
+    }
 
-	public function getSmokeStatus()
-	{
+    public function getSmokeStatus()
+    {
 
-		return $this->smoking;
-	}
+        return $this->smoking;
+    }
 
-	public function setPartyStatus($partying)
-	{
+    public function setPartyStatus($partying)
+    {
 
-		if (is_int($partying) && !is_null($partying)) {
-			$this->partying = $partying;
-		} else {
-			throw new Exception("Type int expected and not null, found: " . $partying);
-		}
-	}
+        if (is_int($partying) && !is_null($partying)) {
+            $this->partying = $partying;
+        } else {
+            throw new Exception("Type int expected and not null, found: " . $partying);
+        }
+    }
 
-	public function getPartyStatus()
-	{
+    public function getPartyStatus()
+    {
 
-		return $this->partying;
-	}
+        return $this->partying;
+    }
 
-	public function setHygieneStatus($hygiene)
-	{
+    public function setHygieneStatus($hygiene)
+    {
 
-		if (is_int($hygiene) && !is_null($hygiene)) {
-			$this->hygiene = $hygiene;
-		} else {
-			throw new Exception("Type int expected and not null, found: " . $hygiene);
-		}
-	}
+        if (is_int($hygiene) && !is_null($hygiene)) {
+            $this->hygiene = $hygiene;
+        } else {
+            throw new Exception("Type int expected and not null, found: " . $hygiene);
+        }
+    }
 
-	public function getHygieneStatus()
-	{
+    public function getHygieneStatus()
+    {
 
-		return $this->hygiene;
-	}
+        return $this->hygiene;
+    }
 
-	public function setDrinkingStatus($drinking)
-	{
+    public function setDrinkingStatus($drinking)
+    {
 
-		if (is_int($drinking) && !is_null($drinking)) {
-			$this->drinking = $drinking;
-		} else {
-			throw new Exception("Type int expected and not null, found: " . $drinking);
-		}
-	}
+        if (is_int($drinking) && !is_null($drinking)) {
+            $this->drinking = $drinking;
+        } else {
+            throw new Exception("Type int expected and not null, found: " . $drinking);
+        }
+    }
 
-	public function getDrinkingStatus()
-	{
-		return $this->drinking;
-	}
+    public function getDrinkingStatus()
+    {
+        return $this->drinking;
+    }
+
+    public function getAbout()
+    {
+        return $this->about;
+    }
 
     public function setAbout($about)
     {
@@ -118,11 +123,6 @@ class userPreference implements PreferenceInterface
         } else {
             throw new Exception("Type string expected and not null, found: " . $about);
         }
-    }
-
-    public function getAbout()
-    {
-        return $this->about;
     }
 
 }

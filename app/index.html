@@ -1,91 +1,54 @@
 <!doctype html>
 <!-- Roommate search application. The app is build to target students within smaller town -->
-
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Roomly Space</title>
-    <link rel="stylesheet" href="public/foundation-6-2/css/foundation.min.css">
-    <link rel="stylesheet" href="public/foundation-6-2/css/custom.css">
-    <link rel="stylesheet" href="public/foundation-6-2/css/inbox-css.css">
+    <link rel="stylesheet" href="public/css/css/foundation.min.css">
+    <link rel="stylesheet" href="public/css/css/custom.css">
+    <link rel="stylesheet" href="public/css/css/inbox-css.css">
+    <link rel="stylesheet" href="public/css/css/sign-register.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
           type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald|Montserrat:400,700|Candal|Bitter' rel='stylesheet'
           type='text/css'>    <!-- Angular scripts -->
     <script src="public/angular-js/bower_components/angular/angular.min.js"></script>
     <script src="public/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-
 </head>
-
 <body ng-app="roomly">
 
-<!-- MENU TOP BAR -->
-<section class="top-bar">
-    <div class="row">
-        <div class="top-bar-left">
-            <a href="#"><img style="width:100px; padding: 5px;" src="public/img/roomly-logo.png"></a>
-        </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                <li><a href="#help">Help</a></li>
-                <li><a href="#authsignup">Account</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
+<!-------------------------------------------------------------------------->
 
-<!-- END OF TOP-MENU-BAR-->
+<!---------- Navigation      -------->
+<nav ng-include="'views/nav.html'"></nav>
 
+<!-------- End of navigation --------->
 
-<!------------------------------------------------------------------------------------------------------------>
+<!-------------------------------------------------------------------------->
 
+<!------------- Main content ------->
 <div ui-view>
     <div class="row">
         <div class="small-4 small-centered columns" style="font-size: medium; color: #009ACD;">
-            <h4>... Please wait loading ...</h4>
+            <h4>... loading ...</h4>
         </div>
     </div>
 </div>
 
-<!-------------------------------------------------------------------------------------->
+<!------------ End of Main content ----------->
 
-<!--    FOOTER  -->
-<section id="footer" class=" allout large secondary ">
-    <div class="row">
-        <div class="large-4 columns">
-            <p>Roomly.Space</p>
-            <p>Your one stop shop for a roommate and or a room space has now been easier.</p>
-        </div>
-        <div class="large-3 large-offset-2 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Our platform</a></li>
-                <li><a href="#">How it works</a></li>
-            </ul>
-        </div>
-        <div class="large-3 columns">
-            <ul class="menu vertical">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </div>
-        <div class="columns" style="text-align: center; font-size: small">
-            <p>&#169; RoomlySpace&#0153;, Inc 2016 </p>
-        </div>
-    </div>
-</section>
+<!-------------------------------------------------------------------------->
 
-<!-- END OF FOOTER -->
+<!-- Footer  -->
+<div ng-include="'views/footer.html'"></div>
+<!-- End of footer  -->
 
-<!----------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
 
-
-<script src="public/foundation-6-2/js/vendor/jquery.min.js"></script>
-<script src="public/foundation-6-2/js/foundation.min.js"></script>
+<!------------- JavaScript file ------------>
+<script src="public/css/js/vendor/jquery.min.js"></script>
+<script src="public/css/js/foundation.min.js"></script>
 <script src="public/js/app.js"></script>
 <script src="public/js/controllers/mainController.js"></script>
 <script src="public/js/controllers/messageController.js"></script>
@@ -94,11 +57,8 @@
 <script src="public/js/controllers/userAuthController.js"></script>
 <script src="public/js/controllers/userPreference.js"></script>
 <script src="public/js/controllers/app_help_controller.js"></script>
-
-
 <script>
     $(document).foundation();
 </script>
 </body>
-
 </html>

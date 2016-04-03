@@ -1,21 +1,14 @@
-<!------------------------------------------------------------------------------------------------------------>
 
-<!-- Tabs Menu -->
-<section class="inner-menu">
-    <div class="row">
-        <ul class="menu button-group round even-4">
-            <li><a class="button" href="#user-profile">Profile</a></li>
-            <li><a class="button" href="#edit-profile">Edit Profile</a></li>
-            <li><a class="button" href="#inbox">Inbox</a></li>
-            <!--<li class="tab-title"><a href="#panel3">Inbox</a></li>-->
-        </ul>
-    </div>
+<!----------------------------------------'
+   EDIT USER PROFILE
+-------------------------------------------------------------------->
 
-</section>
+<!-- Sub Menu -->
+<section ng-include="'views/sub-nav.html'"></section>
 
 <section class="main">
     <!-- User details -->
-    <section class="row profile">
+    <section class="row profile shadow">
         <section class="column">
             <div class="top-bar-left">
                 <ul class="menu">
@@ -88,8 +81,6 @@
             </section>
         </div>
         <!-- End of user details -->
-
-
         <!-- IMPORTANT NOT ABOUT THIS SECTION
 
         Apartment Details
@@ -102,14 +93,10 @@
         Kitchen
         Living room and maybe the outside of the
         apartment or anything like swimming pool
-
-
         -->
-
     </section>
-
     <!-- Apartment edits -->
-    <section class="row profile">
+    <section class="row profile shadow">
         <div class="column">
             <h6>Edit Apartment</h6>
         </div>
@@ -121,10 +108,8 @@
                     <input type="number" placeholder="Lease term ">
                     <input type="number" placeholder="Lease price">
                     <input type="text" placeholder="Location ">
-
                 </div>
             </section>
-
             <section class="large-9 column">
                 <h6 for="uploadRoomImage" class="button">Upload File</h6>
                 <input type="file" id="uploadRoomImage" class="show-for-sr">
@@ -134,7 +119,6 @@
                         <img class="thumbnail"
                              src="public/img/users_profile_images/room-images/recortada-Puro-Hotel-Puro-Hotel-Palma-Doble-standar-350x350.jpg">
                     </div>
-
                     <div class="column">
                         <img class="thumbnail"
                              src="public/img/users_profile_images/room-images/living-room.jpeg">
@@ -143,8 +127,5 @@
             </section>
         </section>
     </section>
-
 </section>
-
-
 <!-------------------------------------------------------------------------------------->
