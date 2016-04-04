@@ -11,17 +11,23 @@ roomly.factory('loginService', function ($http, $location, sessionService) {
             $promise.then(function (msg) {
                 var uid = msg.data;
                 if (uid) {
-                    //scope.msgtxt='Correct information';
                     sessionService.set('uid', uid);
                     $location.path('/main');
                 }
                 else {
                     scope.msgtxt = 'incorrect information';
-                    $location.path('/login');
+                    $location.path('/authsignup');
                 }
             });
         },
 
+        /** Register new user **/
+        register: function () {
+
+
+        },
+
+        /** Log user out of the app **/
         logout: function () {
             sessionService.destroy('uid');
             $location.path('/login');
@@ -35,9 +41,6 @@ roomly.factory('loginService', function ($http, $location, sessionService) {
                 return true;
             else
                 return false;
-
         }
     }
-
-
 });

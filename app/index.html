@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="public/css/css/custom.css">
     <link rel="stylesheet" href="public/css/css/inbox-css.css">
     <link rel="stylesheet" href="public/css/css/sign-register.css">
+    <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Playfair+Display|Crete+Round' rel='stylesheet'
           type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald|Montserrat:400,700|Candal|Bitter' rel='stylesheet'
@@ -28,7 +29,7 @@
 <!-------------------------------------------------------------------------->
 
 <!------------- Main content ------->
-<div ui-view>
+<div ui-view class="view">
     <div class="row">
         <div class="small-4 small-centered columns" style="font-size: medium; color: #009ACD;">
             <h4>... loading ...</h4>
@@ -58,6 +59,9 @@
 <script src="public/js/controllers/userPreference.js"></script>
 <script src="public/js/controllers/app_help_controller.js"></script>
 <script>
+    $("document").ready(function () {
+        $("a[href$=.pdf]").after("<img src='http://placehold.it/16x16' align='absbottom' />")
+    });
     $(document).foundation();
 </script>
 </body>

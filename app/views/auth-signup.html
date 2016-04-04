@@ -12,7 +12,7 @@
         <!-- SIGN UP FORM  -->
         <section class="row">
             <div class="column large-6">
-                <form class="fieldset" name="userForm" ng-submit="signUp()" novalidate>
+                <form class="fieldset userForm" name="userForm" ng-submit="signUp()" novalidate>
                     <h5>Sign Up</h5>
                     <div class="registration medium-12 large-12 medium-centered ">
                         <input type="text" name="firstname" ng-model="signUpInfo.firstname" placeholder="First name"
@@ -31,7 +31,7 @@
                             email is required</p>
 
                         <input type="password" name="password" ng-model="signUpInfo.password" placeholder="Password"
-                               ng-required="true">
+                               ng-required="true" maxlength="8">
                         <p class="validationError" ng-show="userForm.password.$invalid && userForm.password.$touched">
                             Password is required</p>
 
@@ -46,7 +46,7 @@
 
             <!-- LOGIN FORM -->
             <div class="large-6 columns">
-                <form class="fieldset" name="loginForm" ng-submit="login()" novalidate>
+                <form class="fieldset " name="loginForm" ng-submit="login()" novalidate>
                     <h5>Login</h5>
                     <div class="registration medium-12 large-12 medium-centered">
                         <input type="email" name="email" ng-model="loginInfo.email" placeholder="Email"

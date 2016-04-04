@@ -3,12 +3,12 @@
 <div ng-controller="mainController">
     <!------ ORBIT OR CAROUSEL OR IMAGE SLIDER ----->
     <section class="orbit" role="region" aria-label="Favorite Space Pictures">
-        <div class="back-color">
-            <ul class="orbit-container">
-                <li class="orbit-slide">
-                    <img class="resize" src="public/img/ideal-place.jpg">
-                </li>
-            </ul>
+        <div class="back-color orbit-container ">
+            <div class="orbit-container">
+                <div class="orbit-slide slider-size">
+                    <img src="public/img/ideal-place.jpg">
+                </div>
+            </div>
         </div>
         <section class="caption">
             <div class="row">
@@ -17,28 +17,15 @@
                         <h1 class="h1">WELCOME TO ROOMLY SPACE</h1>
                         <h5 class="h5">Looking for a place or someone to be your roommate? <a href="#authsignup">Start
                             here</a></h5>
-                    </div>
-                </div>
-            </div>
-            <section class="row ">
-                <div class="column input-search shadow-search">
-                    <div class="column small-centered small-8" id="inputsearch">
                         <div class="row">
-                            <div class="large-12 columns">
-                                <div class="row collapse">
-                                    <div class="small-10 columns">
-                                        <input type="text" class="shadow-search"
-                                               placeholder="Search for rooms, roommates, or aparments">
-                                    </div>
-                                    <div class="small-2 columns">
-                                        <a href="#" class="button postfix" style="color: white; font-weight: bolder;">Search</a>
-                                    </div>
-                                </div>
+                            <div class="column small-10 small-centered">
+                                <input class="search shadow-search" type="search"
+                                       placeholder="Type here: Search by roommate, room, apartment, price, location">
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </section>
     <!-- END OF ORBIT OR CAROUSEL OR IMAGE SLIDER -->

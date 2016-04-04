@@ -6,7 +6,6 @@
 roomly.controller('BrowseApartmentController', function ($scope) {
     // create a message to display in our view
     $scope.about = 'Everyone come and see how good I look!';
-
     /**
      * This part reads data json data from PHP API
      * the users choose the locations and the name of the

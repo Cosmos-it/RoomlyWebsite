@@ -85,6 +85,8 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
     $scope.signUp = function () {
 
         $scope.firstName = $scope.signUpInfo.firstname;
+
+        console.log($scope.userForm);
         //var data = {
         //    firstName: $scope.signUpInfo.firstName,
         //    lastName: $scope.signUpInfo.lastName,
