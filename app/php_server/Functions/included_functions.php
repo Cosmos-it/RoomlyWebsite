@@ -59,7 +59,6 @@ Call this method when a message needs to be encoded or decoded
 
 function encode_message($stringText)
 {
-
     if (empty($stringText)) {
         return exception();
     } else {
