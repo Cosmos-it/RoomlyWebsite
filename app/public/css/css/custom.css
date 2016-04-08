@@ -184,9 +184,13 @@ textArea {
     color: white;
 }
 
-#footer, li a {
+#footer li a {
     color: #000;
+    font-size: x-small;
+}
 
+#footer p {
+    font-size: x-small;
 }
 
 .button {
@@ -237,4 +241,17 @@ input[type="search"] {
     -moz-box-shadow: 0 0 1px 1px black;
     box-shadow: 0 0 1px 1px black;
     margin-top:20px;
+}
+
+.privacy-style a {
+    color: #000;
+    font-size: x-small;
+}
+
+.privacy-style {
+    text-align: center;
+}
+
+.privacy-style a:hover {
+    color: #2199e8;
 }
