@@ -189,6 +189,10 @@ textArea {
     font-size: x-small;
 }
 
+#footer ul li a:hover {
+    color: #2199e8;
+}
+
 #footer p {
     font-size: x-small;
 }
@@ -252,6 +256,10 @@ input[type="search"] {
     text-align: center;
 }
 
-.privacy-style a:hover {
+/*.privacy-style a:hover {*/
+    /*color: #2199e8;*/
+/*}*/
+
+a:hover {
     color: #2199e8;
 }
