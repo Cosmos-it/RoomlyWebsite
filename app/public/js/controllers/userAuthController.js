@@ -10,6 +10,7 @@
 
 roomly.controller("userAuthentication", function ($scope, $http, $state) {
 
+    /* Grab the data from the user */
     $scope.loginInfo = {
         emai: undefined,
         password: undefined
@@ -17,29 +18,34 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
 
     $scope.login = function () {
         $scope.message = $scope.loginInfo.email;
-        //var data = {
-        //    email: $scope.loginInfo.email,
-        //    password: $scope.loginInfo.password
-        //};
-        //
-        //if (data.email === undefined || data.password === undefined) {
-        //    console.log("Check your password or email");
-        //    $state.go("/login");
-        //
-        //} else {
-        //    //Post information to the server
-        //    $http.post("../includes/API/authentication.api.php", data).success(function (response) {
-        //        console.log(" Test " + response);
-        //        localStorage.setItem("token", JSON.stringify(response));
-        //        if (response === "Error") {
-        //            $state.go("/authsignup");
-        //        } else {
-        //            $state.go("/main");
-        //        }
-        //    }).error(function (error) {
-        //        console.log(error);
-        //    });
-        //}
+        var data = {
+            email: $scope.loginInfo.email,
+            password: $scope.loginInfo.password
+        };
+
+
+        console.log(data.email + data.password);
+
+        if (data.email === undefined || data.password === undefined) {
+            console.log("Check your password or email");
+            $state.go("/login");
+
+        } else {
+            //Post information to the server
+            $http.post("../includes/API/authentication.api.php", data).success(function (response) {
+                console.log(" Test " + response);
+                localStorage.setItem("token", JSON.stringify(response));
+                if (response === "Error") {
+                    $state.go("/authsignup");
+                } else {
+                    $state.go("/main");
+                }
+            }).error(function (error) {
+                console.log(error);
+            });
+
+
+        }
     };
 
     /* Log out function.
@@ -61,14 +67,6 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         });
     };
 
-    $scope.signUpInfo = {
-        firstName: undefined,
-        lastName: undefined,
-        email: undefined,
-        password: undefined,
-        confirmPassword: undefined,
-        roomOwner: 0
-    };
 
     /* Sign up */
     /**
@@ -82,46 +80,61 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
      *
      *=======================================================
      */
+
+    /* Grab data from the user input */
+    $scope.signUpInfo = {
+        firstName: undefined,
+        lastName: undefined,
+        email: undefined,
+        password: undefined,
+        confirmPassword: undefined,
+        roomOwner: 0
+    };
+
+
     $scope.signUp = function () {
 
-        $scope.firstName = $scope.signUpInfo.firstname;
+        var data = {
 
-        console.log($scope.userForm);
-        //var data = {
-        //    firstName: $scope.signUpInfo.firstName,
-        //    lastName: $scope.signUpInfo.lastName,
-        //    email: $scope.signUpInfo.email,
-        //    password: $scope.signUpInfo.password,
-        //    confirmPassword: $scope.signUpInfo.confirmPassword,
-        //    roomOwner: $scope.signUpInfo.roomOwner
-        //};
-        //if (data.firstName == undefined) {
-        //    $scope.firstnameERROR = "field cannot be empty"
-        //}
-        //if (data.lastName == undefined) {
-        //    $scope.lastnameERROR = "field cannot be empty";
-        //}
-        //
-        //if (data.email == undefined) {
-        //    $scope.emailERROR = "field cannot be empty";
-        //}
-        //
-        //if (data.password == undefined) {
-        //    $scope.passwordError = "field cannot be empty";
-        //}
-        ///**=====================================================
-        // * Post information to the server
-        // *=====================================================*/
-        //$http.post("../Includes_PHP/API/userRegistration.api.php", data).success(function (response) {
-        //
-        //    localStorage.setItem("uid", JSON.stringify(response));
-        //    $state.go("/main");
-        //
-        //}).error(function (error) {
-        //    console.log(error);
-        //
-        //})
-        //
+            firstName: $scope.signUpInfo.firstname,
+            lastName: $scope.signUpInfo.lastname,
+            email: $scope.signUpInfo.email,
+            password: $scope.signUpInfo.password,
+            confirmPassword: $scope.signUpInfo.confirmPassword,
+            roomOwner: $scope.signUpInfo.roomOwner
+        };
+
+        console.log(data.firstName + " " + data.lastName + " " +
+                    data.email + " " + data.roomOwner)
+
+
+        if (data.firstName == undefined) {
+            $scope.firstnameERROR = "field cannot be empty"
+        }
+        if (data.lastName == undefined) {
+            $scope.lastnameERROR = "field cannot be empty";
+        }
+
+        if (data.email == undefined) {
+            $scope.emailERROR = "field cannot be empty";
+        }
+
+        if (data.password == undefined) {
+            $scope.passwordError = "field cannot be empty";
+        }
+        /**=====================================================
+         * Post information to the server
+         *=====================================================*/
+        $http.post("../Includes_PHP/API/userRegistration.api.php", data).success(function (response) {
+
+            localStorage.setItem("uid", JSON.stringify(response));
+            $state.go("/main");
+
+        }).error(function (error) {
+            console.log(error);
+
+        })
+
 
     }; //End of sign up
 

@@ -25,7 +25,7 @@ body {
 
 }
 
-.orbit-slide  {
+.orbit-slide {
     height: 500px;
     width: 2000%;
     /*margin: auto;*/
@@ -87,8 +87,8 @@ body {
 
 /* Transparency on the images. (Temporarily commented out) */
 .orbit {
-    background-color: #ECECEC;
-    opacity: 0.8;
+    /*background-color: #3adb76;*/
+    /*opacity: 0.7;*/
     /*width: 100%;*/
 }
 
@@ -180,6 +180,7 @@ textArea {
     bottom: 0;
     left: 0;
 }
+
 .h5 a {
     color: white;
 }
@@ -244,7 +245,7 @@ input[type="search"] {
     -webkit-box-shadow: 0 0 1px 1px black;
     -moz-box-shadow: 0 0 1px 1px black;
     box-shadow: 0 0 1px 1px black;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .privacy-style a {
@@ -257,9 +258,74 @@ input[type="search"] {
 }
 
 /*.privacy-style a:hover {*/
-    /*color: #2199e8;*/
+/*color: #2199e8;*/
 /*}*/
 
 a:hover {
     color: #2199e8;
+}
+
+
+
+
+/*   Featured card material styles */
+
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+html, body {
+    background: #FAFAFA;
+}
+
+.card {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #272727;
+    border-radius: 2px;
+}
+
+.card .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.card .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem;
+}
+
+.card a {
+    color: #ffab40;
+    margin-right: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.card .image {
+    position: relative;
+}
+
+.card .image .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.3rem;
+    color: #fff;
+}
+
+.card .image img {
+    border-radius: 2px 2px 0 0;
 }
