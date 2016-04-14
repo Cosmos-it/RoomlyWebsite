@@ -10,11 +10,27 @@
 
 roomly.controller("userAuthentication", function ($scope, $http, $state) {
 
+    /**
+     *==================================================
+     * Validate user inputs
+     *==================================================*/
+
+    var errors = {
+        firstName: "First name required",
+        lastName: "Last name required",
+        email: "Valid emil required",
+        password: "Password is required"
+    };
+
+
     /* Grab the data from the user */
     $scope.loginInfo = {
-        emai: undefined,
+        email: undefined,
         password: undefined
     };
+
+    if ($scope.firstName == undefined) $scope.firstnameERROR = errors.firstName;
+    if ($scope.lastName == undefined) $scope.lastnameERROR = errors.lastName;
 
     $scope.login = function () {
         $scope.message = $scope.loginInfo.email;
@@ -105,7 +121,7 @@ roomly.controller("userAuthentication", function ($scope, $http, $state) {
         };
 
         console.log(data.firstName + " " + data.lastName + " " +
-                    data.email + " " + data.roomOwner)
+            data.email + " " + data.roomOwner)
 
 
         if (data.firstName == undefined) {
