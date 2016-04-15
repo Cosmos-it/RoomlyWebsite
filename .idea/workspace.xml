@@ -4,7 +4,6 @@
     <list default="true" id="9e74f69e-2714-4907-872d-b084246f0dfe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/css/custom.css" afterPath="$PROJECT_DIR$/app/public/css/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sub-nav.html" afterPath="$PROJECT_DIR$/app/views/sub-nav.html" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,8 +85,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/css/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="75">
+              <caret line="283" column="20" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -516,12 +515,12 @@
       <option name="presentableId" value="Default" />
       <updated>1456962167832</updated>
       <workItem from="1460653806152" duration="737000" />
-      <workItem from="1460662534913" duration="2742000" />
+      <workItem from="1460662534913" duration="2794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3479000" />
+    <option name="totallyTimeSpent" value="3531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="27" y="23" width="1387" height="839" extended-state="0" />
@@ -533,7 +532,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1390306" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33734939" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33601072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -935,8 +934,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/css/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="283" column="20" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="20" />
           <folding />
         </state>
       </provider>
